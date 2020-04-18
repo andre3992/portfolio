@@ -15,14 +15,14 @@ const transport = {
 
 const transporter = nodemailer.createTransport(transport);
 
-module.exports = transporter.verify((error, success) => {
+transporter.verify((error, success) => {
     if (error) {
         console.log(error);
     } else {
         console.log("Server is ready to take messages");
     }
 });
-module.exports = router.post =
+router.post =
     ("/send",
         (req, res, next) => {
             const name = req.body.name;
