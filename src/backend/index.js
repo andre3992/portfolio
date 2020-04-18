@@ -25,7 +25,7 @@ transporter.verify((error, success) => {
     }
 });
 
-exports.handler = router.post('/send', (req, res, next) => {
+router.post('/send', (req, res, next) => {
     const name = req.body.name
     const email = req.body.email
     const message = req.body.message
