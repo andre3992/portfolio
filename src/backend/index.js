@@ -22,7 +22,7 @@ transporter.verify((error, success) => {
     console.log("Server is ready to take messages");
   }
 });
-router.get =
+router.put =
   ("/send",
   (req, res, next) => {
     const name = req.body.name;

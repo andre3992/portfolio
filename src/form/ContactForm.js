@@ -38,7 +38,7 @@ class ContactForm extends React.Component{
   render() {
 	return(
   	<div className="App">
-  	<form id="contact-form" method="GET" onSubmit={this.handleSubmit.bind(this)} 
+  	<form id="contact-form" method="POST" onSubmit={this.handleSubmit.bind(this)} 
  >
   	<div className="form-group">
       	<label htmlFor="name">Name</label>
