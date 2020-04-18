@@ -15,7 +15,7 @@ class ContactForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     axios({
-      method: "POST", 
+      method: "GET", 
       url:"https://portfolio.andre3992.now.sh/send", 
       data:  this.state
     }).then((response)=>{
@@ -38,7 +38,7 @@ class ContactForm extends React.Component{
   render() {
 	return(
   	<div className="App">
-  	<form id="contact-form" method="POST" onSubmit={this.handleSubmit.bind(this)} 
+  	<form id="contact-form" method="GET" onSubmit={this.handleSubmit.bind(this)} 
  >
   	<div className="form-group">
       	<label htmlFor="name">Name</label>
