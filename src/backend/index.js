@@ -3,6 +3,8 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const creds = require('./config');
+const serverless = require('serverless-http');
+
 
 const transport = {
     host: 'smtp.office365.com', // Don’t forget to replace with the SMTP host of your provider
@@ -54,3 +56,4 @@ app.use(cors())
 app.use(express.json())
 app.use('/', router)
 app.listen(3002)
+module.exports.handler = serverless(app);
