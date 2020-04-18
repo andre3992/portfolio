@@ -23,7 +23,7 @@ transporter.verify((error, success) => {
     }
 });
 // router.post
-module.exports = ("/send", (req, res, next) => {
+module.exports = router.post = ("/send", (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
