@@ -16,7 +16,7 @@ class ContactForm extends React.Component{
     e.preventDefault();
     axios({
       method: "POST", 
-      url:"https://loving-hamilton-296054.netlify.app/send", 
+      url:"https://portfolio-two-ruby.now.sh/send", 
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success'){
@@ -38,8 +38,8 @@ class ContactForm extends React.Component{
   render() {
 	return(
   	<div className="App">
-      {/* onSubmit={this.handleSubmit.bind(this)}  */}
-  	<form id="contact-form" method="POST" data-netlify="true">
+      onSubmit={this.handleSubmit.bind(this)} 
+  	<form id="contact-form" method="POST" >
   	<div className="form-group">
       	<label htmlFor="name">Name</label>
       	<input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
