@@ -25,7 +25,7 @@ transporter.verify((error, success) => {
     }
 });
 
-router.post('/send', (req, res, next) => {
+exports.handler = router.post('/send', (req, res, next) => {
     const name = req.body.name
     const email = req.body.email
     const message = req.body.message
@@ -56,5 +56,4 @@ app.use(cors())
 app.use(express.json())
 app.use('/', router)
 app.listen(3002)
-module.exports.handler = serverless(router);
 module.exports.handler = serverless(app);
