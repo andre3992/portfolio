@@ -22,6 +22,7 @@ transporter.verify((error, success) => {
     console.log("Server is ready to take messages");
   }
 });
+
   router.post("/send",(req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
