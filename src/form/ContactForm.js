@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import data from '../backend/index.js';
+
 
 class ContactForm extends React.Component{
   
@@ -16,7 +18,7 @@ class ContactForm extends React.Component{
     e.preventDefault();
     axios({
       method: "POST", 
-      url:"https://loving-hamilton-296054.netlify.app/send", 
+      url:"data/send", 
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success'){
