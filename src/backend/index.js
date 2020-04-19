@@ -23,7 +23,7 @@ transporter.verify((error, success) => {
   }
 });
 
-  exportss.handler = router.post("/send",(req, res, next) => {
+  exports.handler = router.post("/send",(req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
