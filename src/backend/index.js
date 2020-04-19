@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-const creds = require("./config");
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const creds = require('./config');
 
 const transport = {
   host: "smtp.office365.com", // Don’t forget to replace with the SMTP host of your provider
@@ -10,8 +10,8 @@ const transport = {
   auth: {
     user: creds.USER,
     pass: creds.PASS,
-  },
-};
+  }
+}
 
 const transporter = nodemailer.createTransport(transport);
 
@@ -22,9 +22,7 @@ transporter.verify((error, success) => {
     console.log("Server is ready to take messages");
   }
 });
-router.post =
-  ("/send",
-  (req, res, next) => {
+router.post("/send",(req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;

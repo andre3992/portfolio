@@ -10,7 +10,6 @@ function App() {
       <header className="App-header">
       <ThreeInARow></ThreeInARow>
       <ContactForm></ContactForm>
-
       </header>
     </div>
   );
