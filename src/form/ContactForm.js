@@ -16,7 +16,7 @@ class ContactForm extends React.Component{
     e.preventDefault();
     axios({
       method: "POST", 
-      url:"https://portfolio.andre3992.now.sh/send", 
+      url:"https://loving-hamilton-296054.netlify.app/send", 
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success'){
